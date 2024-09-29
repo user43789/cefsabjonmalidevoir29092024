@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<!--
+	Forty par HTML5 UP
+	html5up.net | @ajlkn
+	Gratuit pour une utilisation personnelle et commerciale sous la licence CCA 3.0 (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Générique - Forty par HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="is-preload">
+		<div class="imggeheader">
+			<a href="index.html">
+				<img src="Bleu.png" alt="Logo de l'artiste" class="photoheader"/>
+			</a>
+			<nav>
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="generic.html">Présentation</a></li>
+					<li><a href="elements.html">CV</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<!-- Contenu principal -->
+		<div id="main" class="alt">
+			<!-- Section principale -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>Générique</h1>
+					</header>
+					<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+					<p>Je m'appelle Sabjon Mali. Je suis passionné par le développement web, un domaine qui me fascine et que je découvre chaque jour davantage. Mon expérience en tant que vendeur m’a permis de développer des compétences en communication, ce qui est essentiel pour comprendre et répondre aux besoins des clients. Cela m’a également appris à travailler sous pression et à m’adapter rapidement à diverses situations. Je suis actuellement à la recherche d'opportunités pour mettre en pratique mes compétences en HTML, CSS et JavaScript. Mon objectif est de créer des sites web qui ne sont pas seulement fonctionnels, mais aussi esthétiquement plaisants. J'apprends de manière autonome et je consacre beaucoup de temps à travailler sur des projets personnels, ce qui me permet d'améliorer constamment mes compétences techniques et ma créativité.</p>
+					<p>Je suis très motivé à l’idée de rejoindre une équipe dynamique où je peux continuer à apprendre et à partager mes connaissances. En dehors du développement, je suis passionné par le sport, notamment le football et le vélo, et j'adore voyager. Ces activités enrichissent ma vie, m'inspirent et me donnent un nouveau regard sur le monde, ce qui se reflète souvent dans mes projets de développement. Je suis enthousiaste à l'idée de relever de nouveaux défis et de contribuer à des projets innovants. Je suis convaincu que mes compétences en vente, combinées à ma passion pour le développement web, me permettront de devenir un atout précieux pour toute équipe.</p>
+				</div>
+			</section>
+		</div>
+
+		<section id="contact">
+			<div class="inner">
+				<section>
+					<form id="contactForm" method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" required />
+							</div>
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email" required />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="6" required></textarea>
+							</div>
+						</div>
+						<p id="messageInfo"></p> <!-- Paragraphe pour afficher les messages d'information -->
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" value="Clear" /></li>
+						</ul>
+					</form>
+				</section>
+				<section class="split">
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-envelope"></span>
+							<h3>Email</h3>
+							<a href="#">information@untitled.tld</a>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-phone"></span>
+							<h3>Phone</h3>
+							<span>(000) 000-0000 x12387</span>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-home"></span>
+							<h3>Address</h3>
+							<span>1234 Somewhere Road #5432<br />
+							Nashville, TN 00000<br />
+							United States of America</span>
+						</div>
+					</section>
+				</section>
+			</div>
+		</section>
+
+		<script>
+			// Sélectionner les éléments nécessaires
+			const messageField = document.getElementById('message'); // Champ de texte pour le message
+			const form = document.getElementById('contactForm'); // Le formulaire entier
+			const messageInfo = document.getElementById('messageInfo'); // Élément pour afficher les messages d'information
+			const submitButton = form.querySelector('input[type="submit"]'); // Bouton "Envoyer"
+
+			// Événement qui se déclenche à chaque fois que l'utilisateur tape dans le champ "Message"
+			messageField.addEventListener('input', () => {
+				// Vérifier si le nombre de caractères est inférieur à 5
+				if (messageField.value.length < 5) {
+					messageInfo.textContent = "Le message doit contenir au moins 5 caractères."; // Message d'avertissement
+					messageInfo.style.color = 'red'; // Style du message en rouge
+					submitButton.disabled = true; // Désactiver le bouton "Envoyer" si la condition n'est pas remplie
+				} else {
+					messageInfo.textContent = "Votre message est valide."; // Message de validation
+					messageInfo.style.color = 'green'; // Style du message en vert
+					submitButton.disabled = false; // Réactiver le bouton "Envoyer"
+				}
+			});
+
+			// Gestion de l'événement de soumission du formulaire
+			form.addEventListener('submit', (e) => {
+				// Vérifier si le champ "Message" contient au moins 5 caractères
+				if (messageField.value.length < 5) {
+					e.preventDefault(); // Empêcher l'envoi du formulaire si la condition n'est pas remplie
+					alert("Votre message est trop court. Il doit contenir au moins 5 caractères."); // Alerte utilisateur
+				} else {
+					alert("Message envoyé avec succès !"); // Confirmation d'envoi si tout est correct
+				}
+			});
+		</script>
+
+		<!-- Pied de page -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled</li>
+					<li>Design : <a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</body>
+</html>
